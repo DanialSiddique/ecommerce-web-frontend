@@ -1,5 +1,5 @@
 import axios from "axios"
 const instance = axios.create({
-    baseURL:"http://localhost:3000/"
+    baseURL:"https://ecommerce-web-backend-8pen.onrender.com/"
 })
 export default instance
