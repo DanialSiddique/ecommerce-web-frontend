@@ -4,7 +4,6 @@ import Unauthwrapper from './Unauthwrapper';
 import AuthaticateRoute from './AuthaticateRoute';
 
 const Cart = lazy(() => import("../pages/Cart"));
-const HOme = lazy(()=>import("../pages/Home"))
 const Product = lazy(()=>import("../pages/Product"))
 const Login = lazy(()=>import("../pages/Login"))
 const Signin = lazy(()=>import("../pages/Signin"))
@@ -13,7 +12,7 @@ const Productdetails = lazy(()=>import("../pages/Productdetails"))
 const Notfound = lazy(()=>import("../pages/Notfound"))
 const UserProfile = lazy(()=>import("../pages/user/UserProfile"))
 const UpdateProfile = lazy(()=>import("../pages/user/UpdateProfile"))
-
+import HOme from '../pages/HOme';
 
 const Mainroute = () => {
 
