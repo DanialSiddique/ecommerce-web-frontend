@@ -229,7 +229,7 @@ const Product = () => {
 
                   <div
                     key={product.id}
-                    className="w-1/4 sm:w-1/5 p-2 md:w-1/5 lg:w-1/6 glass shadow-[0_0_5px] hover:scale-101 flex flex-col justify-between rounded-lg text-center gap-2 max-h-100 md:max-h-115 md:min-h-115 md:gap-2 lg:min-h-120 lg:max-h-120 xl:min-h-130 xl:max-h-130 2xl:min-h-140 2xl:max-h-140 transition-all duration-200 product-card"
+                    className="w-1/3 sm:w-1/4 p-2 md:w-1/5 lg:w-1/6 glass shadow-[0_0_5px] hover:scale-101 flex flex-col justify-between rounded-lg text-center gap-2 max-h-100 md:max-h-115 md:gap-2 lg:max-h-120 xl:max-h-130  2xl:max-h-140 transition-all duration-200 product-card"
                   >
 
 
@@ -277,7 +277,7 @@ const Product = () => {
                     }
 
                     <Link
-                      className="bg-slate-900 text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] px-2 py-1 rounded-full my-2 hover:bg-gray-500 border border-transparent hover:border-white hover:scale-115 duration-150"
+                      className="bg-slate-900 text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] px-2 py-1 rounded-full my-2 hover:bg-gray-500 border border-transparent hover:border-white hover:scale-108 duration-150"
 
                       to={`/product-details/${product.id}`}
                     >

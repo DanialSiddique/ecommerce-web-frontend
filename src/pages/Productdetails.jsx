@@ -55,8 +55,8 @@ const Productdetails = () => {
     };
 
     return productDetails ? (
-        <div className="flex flex-col items-center-safe md:flex-row md:justify-center md:items-start md:mx-5 md:ms-10 lg:max-w-300 ">
-            <div className="w-10/12 mx-auto border p-4 glass shadow-[0px_0px_10px] px-6 my-10  hover:scale-101 duration-200 ">
+        <div className="flex flex-col items-center-safe lg:flex-row md:justify-center md:items-start md:mx-5 md:ms-10 lg:max-w-300">
+            <div className="w-10/12 mx-auto border p-4 glass shadow-[0px_0px_10px] px-6 my-10  hover:scale-101 duration-200 max-h-191">
                 <motion.div key={productDetails.id}
                     initial={{
                         opacity: 0,
@@ -78,8 +78,8 @@ const Productdetails = () => {
                         rotate: 0,
                     }}
                     className="">
-                    <div className="text-2xl text-center cart-title text-red-400 p-1 my-3 md:text-3xl">{productDetails.title}</div>
-                    <div ><motion.img
+                    <div className=" text-lg sm:text-2xl text-center cart-title text-red-400 p-1 my-3 ">{productDetails.title}</div>
+                    <div className="flex justify-center" ><motion.img
                         whileHover={{
                             scale: 1.03,
                             rotate: 8,
@@ -90,20 +90,20 @@ const Productdetails = () => {
                             scale: 1,
                             rotate: 0,
                         }}
-                        src={productDetails.image} alt={productDetails.title} className=" my-1 " /></div>
+                        src={productDetails.image} alt={productDetails.title} className=" my-1 max-h-70 sm:max-h-80 " /></div>
                     <hr className="shadow-[0px_10px_30px_10px_black] text-black " />
-                    <div className="text-sm md:text-lg md:py-4 text-red-400 py-2 my-3">{productDetails.discription}</div>
+                    <div className="text-sm md:text-[17px] text-red-400 py-2 mt-2">{productDetails.discription}</div>
                     <div>
-                        <div className="text-xl md:text-2xl md:py-4 text-yellow-400 hover:scale-101 hover:rotate-3 duration-150 -hover:rotate-3">{productDetails.price} $</div>
+                        <div className="text-xl md:text-2xl md:py-2 text-yellow-400 hover:scale-101 hover:rotate-3 duration-150 -hover:rotate-3">{productDetails.price} $</div>
                     </div>
-                    <div className="py-1 my-2 text-3xl md:text-4xl animate-pulse text-red-500">{productDetails.catagory}</div>
+                    <div className="py-1 text-3xl md:text-4xl animate-pulse text-red-500">{productDetails.catagory}</div>
                 </motion.div>
                 {user?.isadmain ? "" : <button className="bg-slate-900 rounded-3xl text-white px-3 py-2 hover:bg-white hover:text-slate-900 border-white hover:border-black" onClick={() => handlecartpositive(productDetails)}>Add to Cart</button>
                 }
                 <br />
             </div>
             {user && user?.isadmain ?
-                <div className="w-[85%] mx-8 bg-[rgba(255,255,255,0.2)] overflow-hidden backdrop-blur-3xl rounded-3xl border md:min-h-193 md:text-2xl lg:max-w-170 md:my-9">
+                <div className="w-[85%] mx-8 md:mx-[7%] lg:mx-10 bg-[rgba(255,255,255,0.2)] overflow-hidden backdrop-blur-3xl rounded-3xl border md:min-h-193 md:text-2xl lg:max-w-170 md:my-9">
                     <form onSubmit={handleSubmit(submitform)}
                         className="flex flex-col gap-5 p-10 py-5 my-4 md:gap-7     ">
                         <input type="text" {...register("title", {
